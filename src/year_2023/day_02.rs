@@ -3,14 +3,14 @@ use itertools::Itertools;
 pub fn solve_part_one(input: &str) -> String {
     let games = parse_game_sets(input);
     let (r_max, g_max, b_max) = (12, 13, 14);
-    let sum: usize = games
+    games
         .into_iter()
         .enumerate()
         .filter_map(|(index, Game(r, g, b))| {
-            (r > r_max || g > g_max || b > b_max).then_some(index + 1)
+            (r <= r_max && g <= g_max && b <= b_max).then_some((index as u32) + 1)
         })
-        .sum();
-    sum.to_string()
+        .sum::<u32>()
+        .to_string()
 }
 
 pub fn solve_part_two(input: &str) -> String {
