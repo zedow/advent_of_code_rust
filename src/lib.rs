@@ -1,9 +1,12 @@
 use std::fs;
 
-pub fn parse_input(path: &str) -> String {
-    fs::read_to_string(path).expect(&format!(
-        "Should have been able to read the file in path {path}"
-    ))
+pub fn parse_input(path: &str) -> Result<String, Box<dyn std::error::Error>> {
+    let contents = fs::read_to_string(path)?;
+    Ok(contents)
+}
+
+pub mod template {
+    pub mod scaffold;
 }
 
 pub mod year_2023 {
@@ -11,3 +14,5 @@ pub mod year_2023 {
     pub mod day_02;
     pub mod day_03;
 }
+
+pub mod commands;
