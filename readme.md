@@ -23,8 +23,6 @@ pub enum Commands {
 
 ## Scaffold
 
-Run the command
-
 ```console
 cargo run scaffold {year} {day}
 ```
