@@ -2,7 +2,7 @@ use advent_of_code_rust::{
     commands::{Args, Commands},
     parse_input,
     template::scaffold,
-    year_2023::day_03::{solve_part_one, solve_part_two},
+    year_2023::day_04::{solve_part_one, solve_part_two},
 };
 use clap::Parser;
 
@@ -17,7 +17,7 @@ fn main() {
 }
 
 fn solve() -> Result<(), Box<dyn std::error::Error>> {
-    let input = parse_input("puzzles/2023/03/input.txt")?;
+    let input = parse_input("puzzles/2023/04/input.txt")?;
     println!(
         "part one answer is {} and part two answer is {}",
         solve_part_one(&input),
