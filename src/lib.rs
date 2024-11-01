@@ -5,9 +5,7 @@ pub fn parse_input(path: &str) -> Result<String, Box<dyn std::error::Error>> {
     Ok(contents)
 }
 
-pub mod template {
-    pub mod scaffold;
-}
+pub mod commands;
 
 pub mod year_2023 {
     pub mod day_01;
@@ -15,5 +13,3 @@ pub mod year_2023 {
     pub mod day_03;
     pub mod day_04;
 }
-
-pub mod commands;

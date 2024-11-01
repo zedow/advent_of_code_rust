@@ -1,7 +1,6 @@
 use advent_of_code_rust::{
-    commands::{Args, Commands},
+    commands::{scaffold, Args, Commands},
     parse_input,
-    template::scaffold,
     year_2023::day_04::{solve_part_one, solve_part_two},
 };
 use clap::Parser;

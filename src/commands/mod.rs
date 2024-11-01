@@ -12,3 +12,6 @@ pub enum Commands {
     Scaffold { year: u16, day: String },
     Solve,
 }
+
+pub mod scaffold;
+pub mod solve;
